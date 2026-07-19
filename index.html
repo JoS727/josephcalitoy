@@ -20,6 +20,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <script defer src="nav.js"></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -41,7 +42,12 @@
         <a class="brand" href="#top">
           <img src="assets/joseph-calitoy-wordmark.svg" alt="Joseph Calitoy" class="brand__logo" />
         </a>
-        <nav class="nav">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav" id="site-nav">
           <a href="#services">Services</a>
           <a href="#pricing">Pricing</a>
           <a href="#availability">Availability</a>
