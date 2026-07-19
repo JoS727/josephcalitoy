@@ -20,6 +20,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css?v=20260719b" />
+    <style>
+      @media (max-width: 900px) {
+        .nav-wrap { flex-direction: row !important; align-items: center !important; }
+        .nav-toggle { display: inline-flex !important; margin-left: auto !important; }
+        .nav { display: none !important; position: absolute !important; top: calc(100% + 10px) !important; left: 1rem !important; right: 1rem !important; flex-direction: column !important; gap: .35rem !important; padding: .75rem !important; border: 1px solid rgba(255,255,255,0.08) !important; border-radius: 18px !important; background: rgba(13,17,23,0.96) !important; box-shadow: 0 24px 60px rgba(0,0,0,0.28) !important; }
+        .nav.is-open { display: flex !important; }
+        .nav a { padding: .85rem 1rem !important; border-radius: 12px !important; background: rgba(255,255,255,0.02) !important; }
+        .hero-copy { order: 2 !important; }
+        .hero-visual { order: 1 !important; }
+      }
+    </style>
     <script defer src="nav.js?v=20260719b"></script>
     <script type="application/ld+json">
       {
@@ -43,9 +54,7 @@
           <img src="assets/joseph-calitoy-wordmark.svg" alt="Joseph Calitoy" class="brand__logo" />
         </a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span class="nav-toggle__icon">☰</span>
         </button>
         <nav class="nav" id="site-nav">
           <a href="#services">Services</a>
