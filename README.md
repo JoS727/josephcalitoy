@@ -1,2 +1,1 @@
-# josephcalitoy
-Joseph Calitoy Official Website
+Joseph Calitoy consulting site.
