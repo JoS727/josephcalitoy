@@ -41,6 +41,7 @@ h2{font-size:clamp(2rem,4vw,3.2rem);max-width:14ch}
 .hero-actions,.contact-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}
 .contact-actions--stacked{align-items:flex-start}
 .button{display:inline-flex;align-items:center;justify-content:center;padding:1rem 1.3rem;border-radius:999px;font-weight:800;border:1px solid transparent}
+.pricing-card .button{margin-top:auto}
 .button--primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#081018}
 .button--secondary{border-color:rgba(119,224,255,0.28);background:rgba(255,255,255,0.02)}
 .hero-points,.resume-card ul{padding-left:1.2rem}
@@ -66,8 +67,9 @@ h2{font-size:clamp(2rem,4vw,3.2rem);max-width:14ch}
 .link-card{padding:1.25rem;display:grid;gap:.35rem}
 .link-card strong{font-size:1.1rem}
 .pricing-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.pricing-grid--offers{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
 .payment-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
-.pricing-card{display:grid;gap:1rem;align-content:start}
+.pricing-card{display:grid;gap:1rem;align-content:start;min-height:100%}
 .pricing-card__label{font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-3);font-weight:800}
 .pricing-card--featured{border-color:rgba(119,224,255,0.35);background:linear-gradient(180deg,rgba(119,224,255,0.08),rgba(255,255,255,0.03))}
 .price{font-family:'Manrope',sans-serif;font-size:clamp(2.2rem,5vw,3.5rem);font-weight:800}
