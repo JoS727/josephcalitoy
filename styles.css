@@ -67,6 +67,16 @@ h2{font-size:clamp(2rem,4vw,3.2rem);max-width:14ch}
 .pricing-card--featured{border-color:rgba(119,224,255,0.35);background:linear-gradient(180deg,rgba(119,224,255,0.08),rgba(255,255,255,0.03))}
 .price{font-family:'Manrope',sans-serif;font-size:clamp(2.2rem,5vw,3.5rem);font-weight:800}
 .price span{font-size:1rem;color:var(--muted);margin-left:.35rem}
+.availability-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.7fr);gap:1.5rem;align-items:start}
+.calendar-card{padding:1.5rem;background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.02));border:1px solid var(--line);box-shadow:var(--shadow)}
+.calendar-card__header{display:flex;justify-content:space-between;gap:1rem;align-items:end;margin-bottom:1rem}
+.calendar-card__header p{color:var(--muted);margin:0}
+.calendar-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:.6rem}
+.calendar-grid--days{margin-bottom:.8rem;color:var(--muted);font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.day{display:flex;align-items:center;justify-content:center;min-height:58px;border-radius:16px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);font-weight:700}
+.day--booked{background:rgba(141,125,255,0.16);border-color:rgba(141,125,255,0.4);color:#d9d2ff}
+.day--recharge{background:rgba(101,240,181,0.12);border-color:rgba(101,240,181,0.35);color:#bdf7df}
+.day--empty{opacity:0;border-style:dashed}
 .contact-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.8fr);gap:1.5rem;align-items:start}
 .contact-card{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2rem;align-items:center}
 .purchase-form{display:grid;gap:1rem;padding:1.5rem;background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.02));border:1px solid var(--line);box-shadow:var(--shadow)}
@@ -74,7 +84,8 @@ label{display:grid;gap:.45rem;font-weight:700}
 input,select,textarea{width:100%;padding:1rem;border-radius:14px;border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.03);color:var(--text);font:inherit}
 textarea{resize:vertical}
 @media (max-width: 900px){
-  .hero-grid,.three-up,.split,.resume-grid,.contact-card,.timeline-item,.pricing-grid,.contact-layout{grid-template-columns:1fr}
+  .hero-grid,.three-up,.split,.resume-grid,.contact-card,.timeline-item,.pricing-grid,.contact-layout,.availability-layout{grid-template-columns:1fr}
   .nav-wrap{flex-direction:column;align-items:flex-start}
+  .calendar-card__header{flex-direction:column;align-items:flex-start}
   h1{max-width:none}
 }
