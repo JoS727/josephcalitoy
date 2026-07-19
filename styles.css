@@ -27,7 +27,9 @@ a{text-decoration:none;color:inherit}
   border-bottom:1px solid var(--line);
 }
 .nav-wrap{display:flex;justify-content:space-between;align-items:center;padding:1rem 0;gap:1rem}
-.brand{font-family:'Manrope',sans-serif;font-weight:800;font-size:1.1rem;letter-spacing:.04em}
+.brand{display:inline-flex;align-items:center}
+.brand__logo{height:46px;width:auto;display:block}
+.hero-wordmark{height:84px;width:auto;display:block;margin:0 0 1rem;filter:drop-shadow(0 10px 28px rgba(0,0,0,0.28))}
 .nav{display:flex;gap:1rem;flex-wrap:wrap;color:var(--muted);font-weight:600}
 .hero{padding:7rem 0 5rem}
 .hero-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr);gap:2rem;align-items:start}
@@ -89,4 +91,5 @@ textarea{resize:vertical}
   .nav-wrap{flex-direction:column;align-items:flex-start}
   .calendar-card__header{flex-direction:column;align-items:flex-start}
   h1{max-width:none}
+  .hero-wordmark{height:64px}
 }
