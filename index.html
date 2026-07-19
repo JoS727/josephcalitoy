@@ -42,6 +42,7 @@
         <a class="brand" href="#top">Joseph Calitoy</a>
         <nav class="nav">
           <a href="#services">Services</a>
+          <a href="#pricing">Pricing</a>
           <a href="#story">Story</a>
           <a href="#experience">Experience</a>
           <a href="#contact">Book</a>
@@ -115,6 +116,46 @@
             <article class="card">
               <h3>Digital Currency & Emerging Tech</h3>
               <p>Blockchain business strategy, digital currency opportunities, frontier-tech positioning, and sober executive evaluation of hype versus leverage.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="pricing">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Pricing</p>
+            <h2>Clear entry points for serious consulting work.</h2>
+            <p>
+              If you want to buy time with Joseph directly from the site, these are the anchor offers. Fractional work is the main retainer model. Advisory sessions and focused day-rate work are available when a retainer is not the right fit.
+            </p>
+          </div>
+          <div class="cards pricing-grid">
+            <article class="card pricing-card pricing-card--featured">
+              <p class="pricing-card__label">Primary engagement</p>
+              <h3>Fractional CTO</h3>
+              <div class="price">$5,000<span>/month</span></div>
+              <p>Best for companies that need recurring executive technical leadership, product guidance, operating systems, and founder-level decision support.</p>
+              <ul>
+                <li>Monthly strategic advisory cadence</li>
+                <li>Technical roadmap and prioritization</li>
+                <li>Leadership, systems, and growth support</li>
+              </ul>
+              <a class="button button--primary" href="#contact">Start a fractional CTO engagement</a>
+            </article>
+            <article class="card pricing-card">
+              <p class="pricing-card__label">Advisory</p>
+              <h3>Hourly Consulting</h3>
+              <div class="price">$250<span>/hour</span></div>
+              <p>For focused strategic sessions, audits, architecture review, AI planning, growth diagnosis, or founder problem-solving.</p>
+              <a class="button button--secondary" href="#contact">Book an hourly engagement</a>
+            </article>
+            <article class="card pricing-card">
+              <p class="pricing-card__label">Without retainer</p>
+              <h3>Day Rate</h3>
+              <div class="price">$1,000<span>/day</span></div>
+              <p>For deep work sprints, workshops, executive intensives, technical reviews, or situations where you need decisive output fast.</p>
+              <a class="button button--secondary" href="#contact">Book a full day</a>
             </article>
           </div>
         </div>
@@ -232,19 +273,60 @@
       </section>
 
       <section class="section contact-section" id="contact">
-        <div class="container contact-card">
-          <div>
-            <p class="eyebrow">Book Joseph</p>
-            <h2>Bring him in for the rooms where clarity, leverage, and trust matter.</h2>
-            <p>
-              If you need AI consulting, tech strategy, founder advisory, board-level thinking, user growth guidance, international development insight, or an operator who can move between product, systems, and executive language — start here.
-            </p>
+        <div class="container contact-layout">
+          <div class="contact-card">
+            <div>
+              <p class="eyebrow">Book Joseph</p>
+              <h2>Bring him in for the rooms where clarity, leverage, and trust matter.</h2>
+              <p>
+                If you need AI consulting, tech strategy, founder advisory, board-level thinking, user growth guidance, international development insight, or an operator who can move between product, systems, and executive language — start here.
+              </p>
+            </div>
+            <div class="contact-actions">
+              <a class="button button--primary" href="mailto:jfargnoli@me.com?subject=Consulting%20Inquiry%20for%20Joseph%20Calitoy">Email Joseph</a>
+              <a class="button button--secondary" href="tel:+18319050458">Call 831-905-0458</a>
+              <p class="contact-note">San Diego, CA · U.S. Citizen · Veteran executive operator</p>
+            </div>
           </div>
-          <div class="contact-actions">
-            <a class="button button--primary" href="mailto:jfargnoli@me.com?subject=Consulting%20Inquiry%20for%20Joseph%20Calitoy">Email Joseph</a>
-            <a class="button button--secondary" href="tel:+18319050458">Call 831-905-0458</a>
-            <p class="contact-note">San Diego, CA · U.S. Citizen · Veteran executive operator</p>
-          </div>
+
+          <form class="purchase-form" action="https://formsubmit.co/jfargnoli@me.com" method="POST">
+            <input type="hidden" name="_subject" value="Joseph Calitoy consulting purchase request" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value="https://josephcalitoy.com/?submitted=1#contact" />
+            <input type="hidden" name="_autoresponse" value="Thanks for your consulting request. Joseph’s team received your package selection and will follow up to finalize scope, payment, and scheduling." />
+
+            <p class="eyebrow">Purchase inquiry</p>
+            <h3>Start on the site</h3>
+            <p class="contact-note">Choose the service, send the request, and Joseph’s team can close scope and payment quickly.</p>
+
+            <label>
+              <span>Full name</span>
+              <input type="text" name="name" placeholder="Your full name" required />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" placeholder="you@example.com" required />
+            </label>
+            <label>
+              <span>Company</span>
+              <input type="text" name="company" placeholder="Company or project" />
+            </label>
+            <label>
+              <span>Select engagement</span>
+              <select name="engagement" required>
+                <option value="">Choose one</option>
+                <option>Fractional CTO — $5,000 / month</option>
+                <option>Hourly Consulting — $250 / hour</option>
+                <option>Day Rate — $1,000 / day</option>
+              </select>
+            </label>
+            <label>
+              <span>What do you need help with?</span>
+              <textarea name="details" rows="6" placeholder="Scope, timeline, goals, and what you want Joseph to solve."></textarea>
+            </label>
+            <button class="button button--primary" type="submit">Request this engagement</button>
+          </form>
         </div>
       </section>
     </main>
