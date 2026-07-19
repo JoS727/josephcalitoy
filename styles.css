@@ -102,8 +102,8 @@ input,select,textarea{width:100%;padding:1rem;border-radius:14px;border:1px soli
 textarea{resize:vertical}
 @media (max-width: 900px){
   .hero-grid,.three-up,.split,.resume-grid,.contact-card,.timeline-item,.pricing-grid,.contact-layout,.availability-layout,.photo-grid{grid-template-columns:1fr}
-  .hero-grid > :first-child{order:2}
-  .hero-grid > :last-child{order:1}
+  .hero-copy{order:2}
+  .hero-visual{order:1}
   .hero-visual__image{height:auto;max-height:640px}
   .nav-wrap{flex-direction:row;align-items:center}
   .nav-toggle{display:inline-flex;margin-left:auto}
