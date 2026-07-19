@@ -89,8 +89,10 @@ h2{font-size:clamp(2rem,4vw,3.2rem);max-width:14ch}
 .day--booked{background:rgba(141,125,255,0.16);border-color:rgba(141,125,255,0.4);color:#d9d2ff}
 .day--recharge{background:rgba(101,240,181,0.12);border-color:rgba(101,240,181,0.35);color:#bdf7df}
 .day--empty{opacity:0;border-style:dashed}
-.contact-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.8fr);gap:1.5rem;align-items:start}
-.contact-card{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2rem;align-items:center}
+.contact-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr);gap:1.5rem;align-items:start}
+.contact-card{display:grid;grid-template-columns:1fr;gap:1.25rem;align-items:start}
+.contact-intro h2{max-width:12ch;font-size:clamp(2.6rem,5vw,4.4rem)}
+.contact-intro p{max-width:56ch}
 .purchase-form{display:grid;gap:1rem;padding:1.5rem;background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.02));border:1px solid var(--line);box-shadow:var(--shadow)}
 .purchase-form--full{height:100%}
 label{display:grid;gap:.45rem;font-weight:700}
