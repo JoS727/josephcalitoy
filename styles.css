@@ -39,6 +39,7 @@ h1{font-size:clamp(3rem,7vw,5.8rem);max-width:11ch}
 h2{font-size:clamp(2rem,4vw,3.2rem);max-width:14ch}
 .lede,.section-heading p,.split p,.card p,.timeline-item p,.resume-card li,.link-card span,.contact-note{line-height:1.8;color:var(--muted)}
 .hero-actions,.contact-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}
+.contact-actions--stacked{align-items:flex-start}
 .button{display:inline-flex;align-items:center;justify-content:center;padding:1rem 1.3rem;border-radius:999px;font-weight:800;border:1px solid transparent}
 .button--primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#081018}
 .button--secondary{border-color:rgba(119,224,255,0.28);background:rgba(255,255,255,0.02)}
@@ -65,7 +66,7 @@ h2{font-size:clamp(2rem,4vw,3.2rem);max-width:14ch}
 .link-card{padding:1.25rem;display:grid;gap:.35rem}
 .link-card strong{font-size:1.1rem}
 .pricing-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
-.pricing-grid--five{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.payment-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .pricing-card{display:grid;gap:1rem;align-content:start}
 .pricing-card__label{font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-3);font-weight:800}
 .pricing-card--featured{border-color:rgba(119,224,255,0.35);background:linear-gradient(180deg,rgba(119,224,255,0.08),rgba(255,255,255,0.03))}
@@ -87,6 +88,7 @@ h2{font-size:clamp(2rem,4vw,3.2rem);max-width:14ch}
 .contact-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.8fr);gap:1.5rem;align-items:start}
 .contact-card{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2rem;align-items:center}
 .purchase-form{display:grid;gap:1rem;padding:1.5rem;background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.02));border:1px solid var(--line);box-shadow:var(--shadow)}
+.purchase-form--full{height:100%}
 label{display:grid;gap:.45rem;font-weight:700}
 input,select,textarea{width:100%;padding:1rem;border-radius:14px;border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.03);color:var(--text);font:inherit}
 textarea{resize:vertical}
