@@ -62,6 +62,7 @@ h2{font-size:clamp(2rem,4vw,3.2rem);max-width:14ch}
 .link-card{padding:1.25rem;display:grid;gap:.35rem}
 .link-card strong{font-size:1.1rem}
 .pricing-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.pricing-grid--five{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .pricing-card{display:grid;gap:1rem;align-content:start}
 .pricing-card__label{font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-3);font-weight:800}
 .pricing-card--featured{border-color:rgba(119,224,255,0.35);background:linear-gradient(180deg,rgba(119,224,255,0.08),rgba(255,255,255,0.03))}
