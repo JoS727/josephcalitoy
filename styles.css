@@ -88,6 +88,8 @@ h2{font-size:clamp(2rem,4vw,3.2rem);max-width:14ch}
 .calendar-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:.6rem}
 .calendar-grid--days{margin-bottom:.8rem;color:var(--muted);font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
 .day{display:flex;align-items:center;justify-content:center;min-height:58px;border-radius:16px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);font-weight:700}
+.calendar-grid a.day{color:var(--text);transition:transform .18s ease, border-color .18s ease, background .18s ease}
+.calendar-grid a.day:hover{transform:translateY(-2px);border-color:rgba(119,224,255,0.35);background:rgba(255,255,255,0.06)}
 .day--booked{background:rgba(141,125,255,0.16);border-color:rgba(141,125,255,0.4);color:#d9d2ff}
 .day--recharge{background:rgba(101,240,181,0.12);border-color:rgba(101,240,181,0.35);color:#bdf7df}
 .day--empty{opacity:0;border-style:dashed}
