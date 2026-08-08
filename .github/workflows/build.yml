@@ -19,6 +19,19 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Reject Cloudflare email-obfuscation artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          # Cloudflare rewrites emails at serve time. If these markers appear in
+          # committed HTML, the page was rebuilt from a scrape of the live site
+          # and its email links are broken. See DEPLOY.md.
+          if grep -rn --include='*.html' -e 'cdn-cgi/l/email-protection' -e '__cf_email__' -e 'email-decode.min.js' .; then
+            echo "::error::Cloudflare email-obfuscation artifacts found in committed HTML. Restore the real mailto: links before merging."
+            exit 1
+          fi
+          echo "No Cloudflare email-obfuscation artifacts found."
+
       - name: Install and build
         shell: bash
         run: |
