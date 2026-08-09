@@ -1,0 +1,10 @@
+name = "josephcalitoy"
+pages_build_output_dir = "."
+compatibility_date = "2026-08-08"
+
+# KV namespace holding captured leads from /api/subscribe.
+# Created 2026-08-09 via: npx wrangler kv namespace create josephcalitoy-leads
+# The binding variable must be LEADS — functions/api/subscribe.js reads env.LEADS.
+[[kv_namespaces]]
+binding = "LEADS"
+id = "1aeb9d7e34f14399a7ebf4d2b59cfcb9"

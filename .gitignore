@@ -1,0 +1,12 @@
+# Wrangler local dev state (contains local KV test data)
+.wrangler/
+
+# Node
+node_modules/
+
+# macOS
+.DS_Store
+
+# Local env — never commit Cloudflare tokens
+.dev.vars
+.env
