@@ -1,50 +1,57 @@
 # Deploying josephcalitoy.com
 
-The site is a static site hosted on **Cloudflare Pages** and deployed by
-**direct upload** with Wrangler. It is NOT deployed by pushing to GitHub.
+The site is a static site on **Cloudflare Pages**, deployed **automatically on
+push to `main`**. Merge or push to `main` and Cloudflare builds and publishes.
 
-That distinction matters: `git push` updates the source of truth only. Until
-someone runs the deploy below, github.com/JoS727/josephcalitoy and the live
-site will drift apart.
+Check a deploy: https://dash.cloudflare.com -> Pages -> josephcalitoy -> Deployments.
+A healthy deploy shows trigger `github:push` and the commit hash you pushed.
 
-## One-time setup
+## History: why this used to be a direct upload
 
-Authenticate Wrangler against the Cloudflare account that owns the Pages
-project (browser OAuth flow):
+Auto-deploy silently did nothing until 2026-08-09. The project's GitHub source
+was wired correctly, but its **build configuration was empty** — no
+`build_command`, no `destination_dir`, no `root_dir` — so a push had no build
+to run and the project no-opped. Every deployment before `4416bc4` was an
+`ad_hoc` direct upload.
 
-```sh
-npx wrangler login
+The fix was to set an explicit (empty) static build config:
+
+```
+build_command   = ""      # static site, nothing to compile
+destination_dir = ""      # serve from the repository root
+root_dir        = ""
 ```
 
-Confirm the account and find the Pages project name:
+If pushes ever stop deploying again, check that build config first — an empty
+`build_config` object is the failure signature, not a permissions error.
+
+## Manual deploy (fallback only)
+
+Auto-deploy is the normal path. Use this only if Pages is down or you need to
+ship without a commit:
 
 ```sh
-npx wrangler whoami
-npx wrangler pages project list
+npx wrangler pages deploy . --project-name=josephcalitoy --branch=main
 ```
 
-## Deploy
+## Bindings
 
-From the repository root:
+`wrangler.toml` declares the KV namespace that `functions/api/subscribe.js`
+writes leads to. Pages reads it on git builds, so it does not need to be set
+in the dashboard:
 
-```sh
-npx wrangler pages deploy . --project-name=<project> --branch=main
 ```
-
-Preview first (recommended) by deploying to a non-production branch:
-
-```sh
-npx wrangler pages deploy . --project-name=<project> --branch=preview
+[[kv_namespaces]]
+binding = "LEADS"
+id      = "1aeb9d7e34f14399a7ebf4d2b59cfcb9"   # josephcalitoy-leads
 ```
-
-Wrangler prints a preview URL. Check it before promoting to production.
 
 ## Verify after deploying
 
 ```sh
 curl -sI https://josephcalitoy.com | grep -i cf-ray
-curl -s https://josephcalitoy.com/ | grep -c 'cdn-cgi'          # expect 0
 curl -s https://josephcalitoy.com/ | grep -c 'calitoy-favicon'  # expect 1
+curl -s https://josephcalitoy.com/api/subscribe                 # expect 405 JSON
 ```
 
 ## Known trap: Cloudflare email obfuscation
