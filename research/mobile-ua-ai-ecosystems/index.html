@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Research Paper — Mobile User Acquisition & AI Ecosystems | Joseph Calitoy</title>
+    <link rel="canonical" href="https://josephcalitoy.com/research/mobile-ua-ai-ecosystems/">
+    <link rel="icon" type="image/png" href="/calitoy-favicon.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mobile User Acquisition & the Impact of AI Ecosystems">
+    <meta name="twitter:description" content="A free 23-page research paper by Joseph Calitoy — AI Consultant, Fractional CTO, and Founder Advisor.">
+    <meta name="twitter:image" content="https://josephcalitoy.com/assets/joseph-calitoy-social.jpg">
+    <meta name="description" content="Download the complete research paper on how AI ecosystems are reshaping mobile user acquisition. 23-page eBook with data from Apple, AppsFlyer, Sensor Tower, and more. Free.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Mobile User Acquisition & the Impact of AI Ecosystems">
+    <meta property="og:description" content="A free 23-page research paper by Joseph Calitoy — AI Consultant, Fractional CTO, and Founder Advisor.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://josephcalitoy.com/research/mobile-ua-ai-ecosystems/">
+    <meta property="og:image" content="https://josephcalitoy.com/assets/joseph-calitoy-standing.jpg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy: #0A1628;
+            --dark-blue: #13294F;
+            --gold: #C5A572;
+            --gold-light: #D4B883;
+            --off-white: #F7F5F2;
+            --light-gray: #E8E6E3;
+            --med-gray: #666;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--navy);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ─── Navigation ─── */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 1.25rem 2rem;
+            background: rgba(10, 22, 40, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(197, 165, 114, 0.15);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        nav .logo span {
+            color: var(--gold);
+        }
+
+        nav .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav .nav-links a {
+            color: var(--light-gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        nav .nav-cta {
+            padding: 0.5rem 1.25rem;
+            background: transparent;
+            border: 1px solid var(--gold);
+            border-radius: 4px;
+            color: var(--gold) !important;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        nav .nav-cta:hover {
+            background: var(--gold);
+            color: var(--navy) !important;
+        }
+
+        /* ─── Hero Section ─── */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6rem 2rem 3rem;
+            position: relative;
+            background: radial-gradient(ellipse at 50% 0%, var(--dark-blue) 0%, var(--navy) 60%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, var(--gold) 50%, transparent 100%);
+            opacity: 0.4;
+        }
+
+        .hero-content {
+            max-width: 720px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: rgba(197, 165, 114, 0.1);
+            border: 1px solid rgba(197, 165, 114, 0.3);
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--gold);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.25rem);
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.25rem;
+        }
+
+        .hero h1 .highlight {
+            color: var(--gold);
+        }
+
+        .hero p.subtitle {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: var(--light-gray);
+            font-weight: 400;
+            line-height: 1.7;
+            margin-bottom: 0.5rem;
+            max-width: 580px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero .byline {
+            color: var(--gold);
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero .byline span {
+            color: var(--light-gray);
+            font-weight: 400;
+        }
+
+        /* ─── Email Capture Form ─── */
+        .email-capture {
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .email-capture form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .email-capture input[type="email"] {
+            width: 100%;
+            padding: 1rem 1.25rem;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(197, 165, 114, 0.3);
+            border-radius: 6px;
+            color: var(--white);
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.2s;
+        }
+
+        .email-capture input[type="email"]::placeholder {
+            color: rgba(247, 245, 242, 0.4);
+        }
+
+        .email-capture input[type="email"]:focus {
+            outline: none;
+            border-color: var(--gold);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 0 3px rgba(197, 165, 114, 0.1);
+        }
+
+        .email-capture button {
+            width: 100%;
+            padding: 1rem 1.25rem;
+            background: var(--gold);
+            color: var(--navy);
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s;
+            letter-spacing: 0.02em;
+        }
+
+        .email-capture button:hover {
+            background: var(--gold-light);
+            transform: translateY(-1px);
+            box-shadow: 0 8px 24px rgba(197, 165, 114, 0.25);
+        }
+
+        .email-capture button:active {
+            transform: translateY(0);
+        }
+
+        .email-capture .privacy {
+            font-size: 0.8rem;
+            color: rgba(232, 230, 227, 0.5);
+            margin-top: 0.5rem;
+        }
+
+        .email-capture .privacy a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .email-capture button[disabled] {
+            opacity: 0.65;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Honeypot — hidden from humans, irresistible to bots.
+           Kept out of the tab order and off the accessibility tree. */
+        .hp-field {
+            position: absolute;
+            left: -9999px;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        /* Form success / error states */
+        .form-message {
+            display: none;
+            padding: 1rem;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+
+        .form-message.success {
+            display: block;
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            color: #4ade80;
+        }
+
+        .form-message.error {
+            display: block;
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #f87171;
+        }
+
+        /* ─── Download-ready panel (replaces the form on success) ─── */
+        .download-ready {
+            display: none;
+            padding: 1.75rem 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            background: rgba(197, 165, 114, 0.08);
+            border: 1px solid rgba(197, 165, 114, 0.35);
+        }
+
+        .download-ready.visible {
+            display: block;
+            animation: panel-in 0.4s ease both;
+        }
+
+        @keyframes panel-in {
+            from { opacity: 0; transform: translateY(8px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .download-ready .check {
+            font-size: 1.6rem;
+            color: #4ade80;
+            line-height: 1;
+            margin-bottom: 0.6rem;
+        }
+
+        .download-ready h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 0.35rem;
+        }
+
+        .download-ready p {
+            font-size: 0.9rem;
+            color: rgba(232, 230, 227, 0.7);
+            margin-bottom: 1.25rem;
+        }
+
+        .download-ready .download-btn {
+            display: inline-block;
+            width: 100%;
+            padding: 1rem 1.25rem;
+            background: var(--gold);
+            color: var(--navy);
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .download-ready .download-btn:hover {
+            background: var(--gold-light);
+            transform: translateY(-1px);
+            box-shadow: 0 8px 24px rgba(197, 165, 114, 0.25);
+        }
+
+        .download-ready .followup {
+            margin-top: 1rem;
+            margin-bottom: 0;
+            font-size: 0.82rem;
+        }
+
+        .download-ready .followup a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Respect users who asked the OS for less motion. */
+        @media (prefers-reduced-motion: reduce) {
+            .download-ready.visible { animation: none; }
+            .fade-in { opacity: 1; transform: none; transition: none; }
+            html { scroll-behavior: auto; }
+        }
+
+        /* ─── Stats Bar ─── */
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat .number {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--gold);
+            letter-spacing: -0.02em;
+        }
+
+        .stat .label {
+            font-size: 0.8rem;
+            color: rgba(232, 230, 227, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0.25rem;
+        }
+
+        /* ─── Content Sections ─── */
+        .section {
+            padding: 5rem 2rem;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .section-light {
+            background: var(--off-white);
+            color: var(--navy);
+        }
+
+        .section h2 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+            line-height: 1.25;
+        }
+
+        .section-dark h2 {
+            color: var(--white);
+        }
+
+        .section-light h2 {
+            color: var(--navy);
+        }
+
+        .section p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.25rem;
+            color: var(--med-gray);
+        }
+
+        .section-dark p {
+            color: var(--light-gray);
+        }
+
+        .section-light p {
+            color: #444;
+        }
+
+        .section ul {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .section ul li {
+            padding: 0.6rem 0 0.6rem 2rem;
+            position: relative;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .section ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        .section-dark ul li {
+            color: var(--light-gray);
+        }
+
+        .section-light ul li {
+            color: #444;
+        }
+
+        /* ─── Key Findings Cards ─── */
+        .findings {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .finding-card {
+            padding: 2rem 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .section-dark .finding-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(197, 165, 114, 0.15);
+        }
+
+        .section-light .finding-card {
+            background: var(--white);
+            border: 1px solid var(--light-gray);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+        }
+
+        .finding-card .big-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--gold);
+            display: block;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .finding-card .description {
+            font-size: 0.9rem;
+            color: var(--med-gray);
+            line-height: 1.5;
+        }
+
+        .section-dark .finding-card .description {
+            color: var(--light-gray);
+        }
+
+        /* ─── Table of Contents ─── */
+        .toc {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(197, 165, 114, 0.15);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .section-light .toc {
+            background: var(--white);
+            border: 1px solid var(--light-gray);
+        }
+
+        .toc h3 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .toc ol {
+            list-style: none;
+            counter-reset: toc-counter;
+        }
+
+        .toc ol li {
+            counter-increment: toc-counter;
+            padding: 0.5rem 0 0.5rem 2.5rem;
+            position: relative;
+            font-size: 0.95rem;
+            border-bottom: 1px solid rgba(197, 165, 114, 0.08);
+        }
+
+        .toc ol li:last-child {
+            border-bottom: none;
+        }
+
+        .toc ol li::before {
+            content: counter(toc-counter);
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .section-dark .toc ol li {
+            color: var(--light-gray);
+        }
+
+        .section-light .toc ol li {
+            color: #444;
+        }
+
+        /* ─── Author Section ─── */
+        .author-section {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        .author-section img {
+            width: 200px;
+            height: auto;
+            border-radius: 6px;
+            flex-shrink: 0;
+        }
+
+        .author-section .author-info h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--navy);
+        }
+
+        .author-section .author-info .title {
+            color: var(--gold);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .author-section .author-info p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .author-cta {
+            margin-top: 1.5rem;
+            padding: 0.7rem 1.5rem;
+            background: var(--navy);
+            color: var(--white) !important;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.2s;
+        }
+
+        .author-cta:hover {
+            background: var(--dark-blue);
+            transform: translateY(-1px);
+        }
+
+        /* ─── Final CTA ─── */
+        .final-cta {
+            text-align: center;
+            padding: 5rem 2rem;
+            background: radial-gradient(ellipse at 50% 50%, var(--dark-blue) 0%, var(--navy) 70%);
+        }
+
+        .final-cta h2 {
+            font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .final-cta p {
+            color: var(--light-gray);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .final-cta .email-capture {
+            max-width: 420px;
+        }
+
+        /* ─── Footer ─── */
+        footer {
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(197, 165, 114, 0.1);
+        }
+
+        footer p {
+            font-size: 0.85rem;
+            color: rgba(232, 230, 227, 0.4);
+        }
+
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        /* ─── Responsive ─── */
+        @media (max-width: 768px) {
+            nav .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 5rem 1.25rem 3rem;
+            }
+
+            .stats-bar {
+                gap: 1.5rem;
+            }
+
+            .stat .number {
+                font-size: 1.4rem;
+            }
+
+            .section {
+                padding: 3.5rem 1.25rem;
+            }
+
+            .author-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .author-section img {
+                width: 160px;
+                margin: 0 auto;
+            }
+
+            .findings {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Fade-in animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ─── Navigation ─── -->
+    <nav>
+        <a href="https://josephcalitoy.com" class="logo">Joseph<span>.</span>Calitoy</a>
+        <div class="nav-links">
+            <a href="https://josephcalitoy.com">Home</a>
+            <a href="#what-inside">What's Inside</a>
+            <a href="#findings">Key Findings</a>
+            <a href="#author">About</a>
+            <a href="#get-it" class="nav-cta">Get the Paper</a>
+        </div>
+    </nav>
+
+    <!-- ─── Hero ─── -->
+    <section class="hero" id="get-it">
+        <div class="hero-content">
+            <div class="hero-badge">Free Research Paper · August 2026</div>
+            <h1>Mobile User Acquisition<br>& the Impact of <span class="highlight">AI Ecosystems</span></h1>
+            <p class="subtitle">
+                A 23-page research paper examining how AI ecosystems are rewriting app discovery,
+                acquisition costs, and growth strategy — with data from Apple, Google, AppsFlyer,
+                and Sensor Tower.
+            </p>
+            <p class="byline">By Joseph Calitoy <span>· AI Consultant · Fractional CTO · Founder Advisor</span></p>
+
+            <!-- Email Capture Form -->
+            <div class="email-capture">
+                <form id="email-form" action="/api/subscribe" method="POST" novalidate>
+                    <label for="email-1" class="hp-field">Email address</label>
+                    <input type="email" id="email-1" name="email" placeholder="Enter your email for instant download" autocomplete="email" required>
+                    <input type="hidden" name="source" value="mobile-ua-ai-ecosystems">
+                    <div class="hp-field" aria-hidden="true">
+                        <label for="company-1">Company</label>
+                        <input type="text" id="company-1" name="company" tabindex="-1" autocomplete="off">
+                    </div>
+                    <button type="submit">Get the Free eBook →</button>
+                </form>
+
+                <div class="download-ready" id="download-ready-1">
+                    <div class="check" aria-hidden="true">✓</div>
+                    <h3>Your copy is ready</h3>
+                    <p>No inbox round-trip. Download it right now.</p>
+                    <a class="download-btn" id="download-link-1" href="/assets/research/mobile-ua-ai-ecosystems-joseph-calitoy.pdf" download>Download the PDF →</a>
+                    <p class="followup">Got questions about your acquisition strategy? <a href="https://calendly.com/joseph-xcalitoy/consultation" target="_blank" rel="noreferrer">Book a strategy session →</a></p>
+                </div>
+
+                <div class="form-message" id="form-error" role="alert"></div>
+                <p class="privacy" id="privacy-1">
+                    No spam. Your email is used to send the paper and occasional research. <a href="https://josephcalitoy.com">Unsubscribe anytime.</a>
+                </p>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="stats-bar">
+                <div class="stat">
+                    <div class="number">23</div>
+                    <div class="label">Pages</div>
+                </div>
+                <div class="stat">
+                    <div class="number">24</div>
+                    <div class="label">Sources Cited</div>
+                </div>
+                <div class="stat">
+                    <div class="number">12</div>
+                    <div class="label">Sections</div>
+                </div>
+                <div class="stat">
+                    <div class="number">Free</div>
+                    <div class="label">Instant Download</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── What's Inside ─── -->
+    <section class="section section-dark" id="what-inside">
+        <h2>What's Inside</h2>
+        <p>
+            Mobile user acquisition is being rebuilt on a new foundation. Rising costs, privacy constraints,
+            and AI ecosystem emergence are not cyclical shifts — they are structural ones. This paper breaks
+            down exactly what's changed and what to do about it.
+        </p>
+        <ul>
+            <li>The economics of mobile UA in 2025–2026 — $78B in global spend, CPI benchmarks by platform and region</li>
+            <li>How Apple Intelligence and Google Gemini are changing app discovery from keyword matching to AI-native, intent-based search</li>
+            <li>Why generative AI apps became the fastest-growing acquisition category at $824M in spend</li>
+            <li>The privacy reset: SKAdNetwork, Privacy Sandbox, and why first-party data is your new competitive moat</li>
+            <li>The creative engine: AI-powered ad production at 40–100+ variants per month</li>
+            <li>Retention-first acquisition: why Google now ranks apps by retention, not install volume</li>
+            <li>A three-horizon strategic framework for founders and executives navigating the shift</li>
+        </ul>
+
+        <div class="toc">
+            <h3>Table of Contents</h3>
+            <ol>
+                <li>Introduction: The New Mobile Acquisition Landscape</li>
+                <li>The Economics of Mobile User Acquisition in 2025–2026</li>
+                <li>AI as a User Acquisition Engine: From Experimentation to Table Stakes</li>
+                <li>The Rise of AI Ecosystems and Their Impact on App Discovery</li>
+                <li>Apple Intelligence and the App Store: AI-Native Discovery</li>
+                <li>Google Gemini and Android: AI as a Discovery Layer</li>
+                <li>Generative AI Apps: The Fastest-Growing Acquisition Category</li>
+                <li>Privacy, Attribution, and the Measurement Reset</li>
+                <li>The Creative Engine: AI-Powered Ad Production at Scale</li>
+                <li>Retention-First Acquisition: Beyond the Install</li>
+                <li>Strategic Frameworks for Founders and Executives</li>
+                <li>Conclusion: Where This Is Going</li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ─── Key Findings ─── -->
+    <section class="section section-light" id="findings">
+        <h2>Key Findings</h2>
+        <p>Seven data points that define the shift:</p>
+
+        <div class="findings">
+            <div class="finding-card">
+                <span class="big-number">$78B</span>
+                <span class="description">Global UA spend in 2025, up 13% year-over-year</span>
+            </div>
+            <div class="finding-card">
+                <span class="big-number">143%</span>
+                <span class="description">Higher user growth with AI-powered UA strategies</span>
+            </div>
+            <div class="finding-card">
+                <span class="big-number">4×</span>
+                <span class="description">Billing growth for AI apps vs non-AI on the App Store</span>
+            </div>
+            <div class="finding-card">
+                <span class="big-number">$824M</span>
+                <span class="description">GenAI app UA spend — fastest-growing category</span>
+            </div>
+            <div class="finding-card">
+                <span class="big-number">80%</span>
+                <span class="description">Of users lost within 3 days of install</span>
+            </div>
+            <div class="finding-card">
+                <span class="big-number">222%</span>
+                <span class="description">Increase in CAC over the past decade</span>
+            </div>
+            <div class="finding-card">
+                <span class="big-number">29%</span>
+                <span class="description">Remarketing's share of total UA spend, up from 25%</span>
+            </div>
+            <div class="finding-card">
+                <span class="big-number">$1.4T</span>
+                <span class="description">App Store ecosystem value in 2025</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── Who This Is For ─── -->
+    <section class="section section-dark">
+        <h2>Who This Is For</h2>
+        <ul>
+            <li><strong>Founders</strong> building mobile apps who need to understand how AI ecosystems affect discovery and acquisition costs</li>
+            <li><strong>Growth teams</strong> who need to rebuild their acquisition strategy for a privacy-constrained, AI-native world</li>
+            <li><strong>Executives</strong> making investment decisions in mobile and need to know where the market is heading</li>
+            <li><strong>Product leaders</strong> who need to understand why AI integration is now a distribution issue, not just a feature issue</li>
+            <li><strong>Marketers</strong> transitioning from traditional UA playbooks to AI-powered, retention-first strategies</li>
+        </ul>
+    </section>
+
+    <!-- ─── Author ─── -->
+    <section class="section section-light" id="author">
+        <h2>About the Author</h2>
+        <div class="author-section">
+            <img src="https://josephcalitoy.com/assets/joseph-calitoy-standing.jpg" alt="Joseph Calitoy">
+            <div class="author-info">
+                <h3>Joseph Calitoy</h3>
+                <div class="title">AI Consultant · Fractional CTO · Founder Advisor</div>
+                <p>
+                    Joseph advises founders and leadership teams across AI, product, growth, systems,
+                    and executive decision-making. His work is practical, fast-moving, and built around
+                    decisions that matter. Based in San Diego, CA. U.S. Citizen. Veteran executive operator.
+                </p>
+                <a href="https://josephcalitoy.com" class="author-cta">Work with Joseph →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── Final CTA ─── -->
+    <section class="final-cta">
+        <h2>Get the Full Paper</h2>
+        <p>23 pages. 24 cited sources. Strategic frameworks you can use this week.</p>
+        <div class="email-capture">
+            <form id="email-form-2" action="/api/subscribe" method="POST" novalidate>
+                <label for="email-2" class="hp-field">Email address</label>
+                <input type="email" id="email-2" name="email" placeholder="Enter your email" autocomplete="email" required>
+                <input type="hidden" name="source" value="mobile-ua-ai-ecosystems">
+                <div class="hp-field" aria-hidden="true">
+                    <label for="company-2">Company</label>
+                    <input type="text" id="company-2" name="company" tabindex="-1" autocomplete="off">
+                </div>
+                <button type="submit">Download Free eBook →</button>
+            </form>
+
+            <div class="download-ready" id="download-ready-2">
+                <div class="check" aria-hidden="true">✓</div>
+                <h3>Your copy is ready</h3>
+                <p>No inbox round-trip. Download it right now.</p>
+                <a class="download-btn" id="download-link-2" href="/assets/research/mobile-ua-ai-ecosystems-joseph-calitoy.pdf" download>Download the PDF →</a>
+                <p class="followup">Got questions about your acquisition strategy? <a href="https://calendly.com/joseph-xcalitoy/consultation" target="_blank" rel="noreferrer">Book a strategy session →</a></p>
+            </div>
+
+            <div class="form-message" id="form-error-2" role="alert"></div>
+            <p class="privacy" id="privacy-2">No spam. Instant download.</p>
+        </div>
+    </section>
+
+    <!-- ─── Footer ─── -->
+    <footer>
+        <p>© 2026 Joseph Calitoy · <a href="https://josephcalitoy.com">josephcalitoy.com</a> · joseph@xcalitoy.com · 213-545-2051</p>
+    </footer>
+
+    <!-- ─── Form Handler ─── -->
+    <script>
+        // The asset is public. Capturing the email is the goal, but a backend
+        // failure must never cost the reader the download they were promised —
+        // so this path is the hard-coded fallback if the API says nothing useful.
+        const FALLBACK_PDF = '/assets/research/mobile-ua-ai-ecosystems-joseph-calitoy.pdf';
+
+        function handleForm(formId, readyId, linkId, errorId, privacyId) {
+            const form = document.getElementById(formId);
+            const ready = document.getElementById(readyId);
+            const link = document.getElementById(linkId);
+            const errorMsg = document.getElementById(errorId);
+            const privacy = document.getElementById(privacyId);
+            if (!form) return;
+
+            const emailInput = form.querySelector('input[type="email"]');
+            const submitBtn = form.querySelector('button');
+
+            function fail(message) {
+                errorMsg.textContent = message;
+                errorMsg.classList.add('error');
+            }
+
+            function succeed(url) {
+                form.style.display = 'none';
+                if (privacy) privacy.style.display = 'none';
+                errorMsg.classList.remove('error');
+                errorMsg.textContent = '';
+                link.href = url || FALLBACK_PDF;
+                ready.classList.add('visible');
+
+                // Kick the download off automatically; the button remains for
+                // anyone whose browser blocks the programmatic click.
+                try { link.click(); } catch (err) { /* user clicks manually */ }
+
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'generate_lead', {
+                        event_category: 'Research Paper',
+                        event_label: 'Mobile UA & AI Ecosystems',
+                        value: 1
+                    });
+                }
+            }
+
+            form.addEventListener('submit', async function (e) {
+                e.preventDefault();
+
+                const email = (emailInput.value || '').trim();
+                if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
+                    fail('Please enter a valid email address.');
+                    emailInput.focus();
+                    return;
+                }
+
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Sending…';
+                submitBtn.disabled = true;
+                errorMsg.classList.remove('error');
+                errorMsg.textContent = '';
+
+                try {
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+                        body: JSON.stringify({
+                            email: email,
+                            source: form.querySelector('input[name="source"]').value,
+                            company: form.querySelector('input[name="company"]').value
+                        })
+                    });
+
+                    let data = {};
+                    try { data = await response.json(); } catch (err) { /* non-JSON response */ }
+
+                    if (response.ok && data.ok) {
+                        succeed(data.download);
+                        return;
+                    }
+
+                    if (response.status === 400 && data.error) {
+                        fail(data.error);
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                        return;
+                    }
+
+                    // Server-side problem. We have the email in hand and the
+                    // asset is public — release the download rather than
+                    // punish the reader for our outage.
+                    succeed(null);
+                } catch (err) {
+                    // Network failure. Same reasoning as above.
+                    succeed(null);
+                }
+            });
+        }
+
+        handleForm('email-form', 'download-ready-1', 'download-link-1', 'form-error', 'privacy-1');
+        handleForm('email-form-2', 'download-ready-2', 'download-link-2', 'form-error-2', 'privacy-2');
+
+        // Sync email between the two forms so scrolling doesn't mean retyping.
+        const form1Email = document.querySelector('#email-form input[type="email"]');
+        const form2Email = document.querySelector('#email-form-2 input[type="email"]');
+        if (form1Email && form2Email) {
+            form1Email.addEventListener('input', () => { form2Email.value = form1Email.value; });
+            form2Email.addEventListener('input', () => { form1Email.value = form2Email.value; });
+        }
+
+        // Fade-in on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.section, .finding-card').forEach(el => {
+            el.classList.add('fade-in');
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
