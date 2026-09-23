@@ -116,6 +116,39 @@ export async function onRequestPost({ request, env }) {
     }
   }
 
+  // Lead alert — email Joseph the moment a lead lands. Fire-and-forget so it
+  // never blocks the reader's download. MailChannels is free for Cloudflare
+  // Workers; set ALERT_EMAIL to override the recipient.
+  const alertTo = env.ALERT_EMAIL || 'joseph@calitoy.com';
+  try {
+    await fetch('https://api.mailchannels.net/tx/v1/send', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        personalizations: [{ to: [{ email: alertTo }] }],
+        from: { email: 'leads@josephcalitoy.com', name: 'josephcalitoy.com' },
+        subject: `New lead: ${email}`,
+        content: [{
+          type: 'text/plain',
+          value: [
+            `A new lead just came through josephcalitoy.com.`,
+            ``,
+            `Email:   ${email}`,
+            `Source:  ${record.source}`,
+            `At:      ${record.at}`,
+            `Country: ${record.country || '—'}`,
+            `Referer: ${record.referer || '—'}`,
+            ``,
+            `Stored: ${stored.join(', ') || 'NONE — check the KV binding'}`,
+          ].join('\n'),
+        }],
+      }),
+    });
+    stored.push('alert');
+  } catch (err) {
+    console.error('Lead alert failed', err);
+  }
+
   if (stored.length === 0) {
     console.warn(`No lead store configured. Dropped capture for ${email}.`);
   }
