@@ -96,6 +96,11 @@ h2{font-size:clamp(2rem,4vw,3.2rem);max-width:14ch}
 label{display:grid;gap:.45rem;font-weight:700}
 input,select,textarea{width:100%;padding:1rem;border-radius:14px;border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.03);color:var(--text);font:inherit}
 textarea{resize:vertical}
+.card--comsext{grid-column:1 / -1;background:linear-gradient(135deg,rgba(141,125,255,0.10),rgba(255,255,255,0.02));border-color:rgba(141,125,255,0.4)}
+.card-eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;color:var(--accent-2);font-weight:800;margin:0 0 .6rem}
+.card-price{font-family:'Manrope',sans-serif;font-weight:800;color:var(--text);margin-top:.75rem}
+.card-link{display:inline-block;margin-top:.9rem;font-weight:800;color:var(--accent)}
+.card-link:hover{color:var(--accent-2)}
 @media (max-width: 900px){
   .hero-grid,.three-up,.split,.resume-grid,.contact-card,.timeline-item,.pricing-grid,.contact-layout,.availability-layout,.photo-grid{grid-template-columns:1fr}
   .hero{padding:1.25rem 0 3rem}
