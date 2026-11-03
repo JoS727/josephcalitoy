@@ -116,3 +116,9 @@ textarea{resize:vertical}
   h1{max-width:none}
   .hero-wordmark{height:64px}
 }
+
+/* ── Book section (PAUSE. DON'T KILL YOURSELF) ── */
+.book-grid{display:grid;gap:2rem;grid-template-columns:280px 1fr;align-items:start}
+.book-cover{display:block;width:100%;max-width:280px;height:auto;border-radius:.6rem;border:1px solid var(--line);box-shadow:var(--shadow)}
+.book-copy .hero-actions{display:flex;gap:.8rem;flex-wrap:wrap}
+@media (max-width:760px){.book-grid{grid-template-columns:1fr}.book-cover{max-width:220px}}
