@@ -77,7 +77,20 @@
       gtag('js', new Date());
       gtag('config', 'G-ZVP8TDJLEF');
     </script>
-  </head>
+  <style>
+  /* five-identity top bar (shared Calitoy network nav) */
+  .nav-wrap { flex-wrap: wrap !important; }
+  .identity-nav { display: flex; flex: 1 1 100%; max-width: none; gap: 0; margin: 0.4rem 0 0; }
+  .identity-nav a { flex: 1 1 0; text-align: center; text-decoration: none; white-space: nowrap;
+    color: rgba(255,255,255,0.62); font-family: 'Inter', -apple-system, sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.24em;
+    padding: 0.55rem 0.4rem; border-left: 1px solid rgba(255,255,255,0.05); transition: color 200ms, background 200ms; }
+  .identity-nav a:first-child { border-left: 0; }
+  .identity-nav a:hover { color: #d8b46a; background: rgba(216,182,106,0.06); }
+  .identity-nav a.active { color: #ff8a2a; background: rgba(255,138,42,0.10); box-shadow: inset 0 -2px 0 #ff8a2a; }
+  @media (max-width: 900px) { .identity-nav { max-width: none; width: 100%; order: 3; margin-left: 0; } }
+  @media (max-width: 430px) { .identity-nav a { font-size: 0.58rem; letter-spacing: 0.14em; padding: 0.5rem 0.25rem; } }
+</style>
+</head>
   <body>
     <header class="site-header">
       <div class="container nav-wrap">
@@ -97,6 +110,7 @@
           <a href="/research/mobile-ua-ai-ecosystems/">Research</a>
           <a href="#payments">Payment Options</a>
         </nav>
+<nav class="identity-nav" aria-label="The five identities"><a href="https://calitoy.org">AGENCY</a><a href="https://xcalitoy.com">SONGWRITER</a><a href="https://josephcalitoy.com" class="active" aria-current="page">CONSULTANT</a><a href="https://author.calitoy.com">AUTHOR</a><a href="https://art.calitoy.com">ARTIST</a></nav>
       </div>
     </header>
 
