@@ -1,5 +1,18 @@
 # Deploying josephcalitoy.com
 
+## The live domain is NOT served by Cloudflare Pages
+
+`josephcalitoy.com` resolves to an A record `40.160.137.11` (core8, OVH) and is
+served by **nginx** from `/var/www/josephcalitoy.com/html`, a git checkout of this
+repo. Verified 2026-11-21: the Pages project `josephcalitoy` has no custom domain
+(all 43 projects checked), and the live page carried a 2026-11-07 `last-modified`
+while Pages had already built the newest commit — so pushes to `main` do **not**
+change the live site. Publishing a change means updating that checkout on core8
+(`ssh core8`, then `git pull` or a direct file edit), not merging to `main`.
+
+The rest of this file describes the Cloudflare Pages path, which still builds to
+`josephcalitoy.pages.dev` on every push and is useful for previews only.
+
 The site is a static site on **Cloudflare Pages**, deployed **automatically on
 push to `main`**. Merge or push to `main` and Cloudflare builds and publishes.
 
